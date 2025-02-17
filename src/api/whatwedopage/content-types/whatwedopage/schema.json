@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "whatwedopages",
+  "info": {
+    "singularName": "whatwedopage",
+    "pluralName": "whatwedopages",
+    "displayName": "What We Do Page",
+    "description": "What we do page content and settings"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.hero",
+      "repeatable": false
+    },
+    "introduction": {
+      "type": "component",
+      "component": "sections.what-we-do-intro",
+      "repeatable": false
+    },
+    "tabs": {
+      "type": "component",
+      "component": "sections.tab-content",
+      "repeatable": true
+    },
+    "coreServices": {
+      "type": "component",
+      "component": "sections.core-services",
+      "repeatable": false
+    }
+  }
+}

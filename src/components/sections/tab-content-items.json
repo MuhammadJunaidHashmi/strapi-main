@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_sections_tab_content_items",
+  "info": {
+    "displayName": "Tab Content Items",
+    "description": "Individual items within tab content"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "stepNumber": {
+      "type": "integer"
+    }
+  }
+}

@@ -502,6 +502,41 @@ export interface ApiServicespageServicespage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiWhatwedopageWhatwedopage extends Struct.SingleTypeSchema {
+  collectionName: 'whatwedopages';
+  info: {
+    description: 'What we do page content and settings';
+    displayName: 'What We Do Page';
+    pluralName: 'whatwedopages';
+    singularName: 'whatwedopage';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    coreServices: Schema.Attribute.Component<'sections.core-services', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'sections.hero', false>;
+    introduction: Schema.Attribute.Component<
+      'sections.what-we-do-intro',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::whatwedopage.whatwedopage'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    tabs: Schema.Attribute.Component<'sections.tab-content', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1014,6 +1049,7 @@ declare module '@strapi/strapi' {
       'api::blogpage.blogpage': ApiBlogpageBlogpage;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::servicespage.servicespage': ApiServicespageServicespage;
+      'api::whatwedopage.whatwedopage': ApiWhatwedopageWhatwedopage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

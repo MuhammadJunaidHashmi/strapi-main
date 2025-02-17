@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_sections_tab_contents",
+  "info": {
+    "displayName": "Tab Content",
+    "description": "Content for individual tabs in what we do page"
+  },
+  "options": {},
+  "attributes": {
+    "tabId": {
+      "type": "string",
+      "required": true
+    },
+    "tabLabel": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "component",
+      "component": "sections.tab-content-items",
+      "repeatable": true
+    }
+  }
+}

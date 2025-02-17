@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_what_we_do_intros",
+  "info": {
+    "displayName": "What We Do Introduction",
+    "description": "Introduction section for what we do page"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

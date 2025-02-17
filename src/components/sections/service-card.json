@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_sections_service_cards",
+  "info": {
+    "displayName": "Service Card",
+    "description": "Individual service card component"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"],
+      "required": true
+    }
+  }
+}

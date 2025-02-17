@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_core_services",
+  "info": {
+    "displayName": "Core Services",
+    "description": "Core services section for what we do page"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "services": {
+      "type": "component",
+      "component": "sections.service-card",
+      "repeatable": true
+    }
+  }
+}

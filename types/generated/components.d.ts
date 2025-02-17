@@ -84,6 +84,18 @@ export interface SectionsContactForm extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsCoreServices extends Struct.ComponentSchema {
+  collectionName: 'components_sections_core_services';
+  info: {
+    description: 'Core services section for what we do page';
+    displayName: 'Core Services';
+  };
+  attributes: {
+    services: Schema.Attribute.Component<'sections.service-card', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SectionsCta extends Struct.ComponentSchema {
   collectionName: 'components_sections_ctas';
   info: {
@@ -246,6 +258,19 @@ export interface SectionsPoweredBy extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsServiceCard extends Struct.ComponentSchema {
+  collectionName: 'components_sections_service_cards';
+  info: {
+    description: 'Individual service card component';
+    displayName: 'Service Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SectionsServiceOffer extends Struct.ComponentSchema {
   collectionName: 'components_sections_service_offers';
   info: {
@@ -284,6 +309,35 @@ export interface SectionsSubServices extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsTabContent extends Struct.ComponentSchema {
+  collectionName: 'components_sections_tab_contents';
+  info: {
+    description: 'Content for individual tabs in what we do page';
+    displayName: 'Tab Content';
+  };
+  attributes: {
+    content: Schema.Attribute.Component<'sections.tab-content-items', true>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    tabId: Schema.Attribute.String & Schema.Attribute.Required;
+    tabLabel: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SectionsTabContentItems extends Struct.ComponentSchema {
+  collectionName: 'components_sections_tab_content_items';
+  info: {
+    description: 'Individual items within tab content';
+    displayName: 'Tab Content Items';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    icon: Schema.Attribute.Media<'images'>;
+    stepNumber: Schema.Attribute.Integer;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SectionsTestimonials extends Struct.ComponentSchema {
   collectionName: 'components_sections_testimonials';
   info: {
@@ -296,6 +350,18 @@ export interface SectionsTestimonials extends Struct.ComponentSchema {
     logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     quote: Schema.Attribute.Text & Schema.Attribute.Required;
     subtitle: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SectionsWhatWeDoIntro extends Struct.ComponentSchema {
+  collectionName: 'components_sections_what_we_do_intros';
+  info: {
+    description: 'Introduction section for what we do page';
+    displayName: 'What We Do Introduction';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -419,6 +485,7 @@ declare module '@strapi/strapi' {
       'sections.blog-section': SectionsBlogSection;
       'sections.contact-details': SectionsContactDetails;
       'sections.contact-form': SectionsContactForm;
+      'sections.core-services': SectionsCoreServices;
       'sections.cta': SectionsCta;
       'sections.get-started': SectionsGetStarted;
       'sections.hero': SectionsHero;
@@ -431,10 +498,14 @@ declare module '@strapi/strapi' {
       'sections.our-client': SectionsOurClient;
       'sections.pillars': SectionsPillars;
       'sections.powered-by': SectionsPoweredBy;
+      'sections.service-card': SectionsServiceCard;
       'sections.service-offer': SectionsServiceOffer;
       'sections.services': SectionsServices;
       'sections.sub-services': SectionsSubServices;
+      'sections.tab-content': SectionsTabContent;
+      'sections.tab-content-items': SectionsTabContentItems;
       'sections.testimonials': SectionsTestimonials;
+      'sections.what-we-do-intro': SectionsWhatWeDoIntro;
       'shared.author': SharedAuthor;
       'shared.blog-post': SharedBlogPost;
       'shared.media': SharedMedia;
