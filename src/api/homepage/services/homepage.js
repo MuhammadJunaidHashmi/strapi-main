@@ -23,6 +23,7 @@ module.exports = createCoreService('api::homepage.homepage', ({ strapi }) => ({
         pillars: {
           populate: ['sections']
         },
+        augmentation:{},
         poweredBy: {
           populate: ['logos']
         },
@@ -31,7 +32,14 @@ module.exports = createCoreService('api::homepage.homepage', ({ strapi }) => ({
         },
         blogSection: {
           populate: ['posts']
-        }
+        },
+        contactForm: {
+          populate: ['contactDetails']
+        },
+        OurClient:{
+           populate:['Images']
+        },
+        getStarted:{}
       }
     });
   },
