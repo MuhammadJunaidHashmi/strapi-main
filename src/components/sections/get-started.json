@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_get_starteds",
+  "info": {
+    "displayName": "Get Started"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "ctaText": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

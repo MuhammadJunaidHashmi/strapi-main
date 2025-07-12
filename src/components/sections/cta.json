@@ -10,16 +10,16 @@
       "type": "string",
       "required": true
     },
-    "contactEmail": {
-      "type": "email",
-      "required": true
-    },
     "contactPhone": {
       "type": "string",
       "required": true
     },
     "address": {
       "type": "text",
+      "required": true
+    },
+    "contactEmail": {
+      "type": "email",
       "required": true
     }
   }

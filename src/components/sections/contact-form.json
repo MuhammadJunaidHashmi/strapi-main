@@ -22,13 +22,10 @@
       "type": "string",
       "required": true
     },
-    "cta": {
-      "type": "string",
-      "required": true
-    },
-    "ctaButton": {
-      "type": "string",
-      "required": true
+    "contactDetails": {
+      "type": "component",
+      "component": "sections.contact-details",
+      "repeatable": false
     }
   }
 }

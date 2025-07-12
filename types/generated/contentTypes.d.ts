@@ -482,7 +482,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    cta: Schema.Attribute.Component<'sections.cta', false>;
+    getStarted: Schema.Attribute.Component<'sections.get-started', false>;
     hero: Schema.Attribute.Component<'sections.hero', false>;
     howWeWork: Schema.Attribute.Component<'sections.how-we-work', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

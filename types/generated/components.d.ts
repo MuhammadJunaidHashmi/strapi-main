@@ -53,6 +53,19 @@ export interface SectionsBlogSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsContactDetails extends Struct.ComponentSchema {
+  collectionName: 'components_sections_contact_details';
+  info: {
+    displayName: 'contactDetails';
+  };
+  attributes: {
+    address: Schema.Attribute.String;
+    contactEmail: Schema.Attribute.String;
+    contactPhone: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsContactForm extends Struct.ComponentSchema {
   collectionName: 'components_sections_contact_forms';
   info: {
@@ -60,8 +73,10 @@ export interface SectionsContactForm extends Struct.ComponentSchema {
     displayName: 'Contact Form';
   };
   attributes: {
-    cta: Schema.Attribute.String & Schema.Attribute.Required;
-    ctaButton: Schema.Attribute.String & Schema.Attribute.Required;
+    contactDetails: Schema.Attribute.Component<
+      'sections.contact-details',
+      false
+    >;
     fields: Schema.Attribute.JSON & Schema.Attribute.Required;
     interestOptions: Schema.Attribute.JSON & Schema.Attribute.Required;
     submitText: Schema.Attribute.String & Schema.Attribute.Required;
@@ -80,6 +95,17 @@ export interface SectionsCta extends Struct.ComponentSchema {
     contactEmail: Schema.Attribute.Email & Schema.Attribute.Required;
     contactPhone: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SectionsGetStarted extends Struct.ComponentSchema {
+  collectionName: 'components_sections_get_starteds';
+  info: {
+    displayName: 'Get Started';
+  };
+  attributes: {
+    ctaText: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -296,8 +322,10 @@ declare module '@strapi/strapi' {
       'sections.about': SectionsAbout;
       'sections.augmentation': SectionsAugmentation;
       'sections.blog-section': SectionsBlogSection;
+      'sections.contact-details': SectionsContactDetails;
       'sections.contact-form': SectionsContactForm;
       'sections.cta': SectionsCta;
+      'sections.get-started': SectionsGetStarted;
       'sections.hero': SectionsHero;
       'sections.how-we-work': SectionsHowWeWork;
       'sections.our-client': SectionsOurClient;
