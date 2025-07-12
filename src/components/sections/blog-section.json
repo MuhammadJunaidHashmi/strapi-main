@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_blog_sections",
+  "info": {
+    "displayName": "Blog Section",
+    "description": "Blog section component"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "posts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.blog-post",
+      "required": true,
+      "min": 1
+    }
+  }
+}

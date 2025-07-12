@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_pillar_sections",
+  "info": {
+    "displayName": "Pillar Section",
+    "description": "A pillar section with title and description"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

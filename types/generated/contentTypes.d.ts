@@ -463,6 +463,45 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
+  collectionName: 'homepages';
+  info: {
+    description: 'Homepage content and settings';
+    displayName: 'Homepage';
+    pluralName: 'homepages';
+    singularName: 'homepage';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    about: Schema.Attribute.Component<'sections.about', false>;
+    augmentation: Schema.Attribute.Component<'sections.augmentation', false>;
+    blogSection: Schema.Attribute.Component<'sections.blog-section', false>;
+    contactForm: Schema.Attribute.Component<'sections.contact-form', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cta: Schema.Attribute.Component<'sections.cta', false>;
+    hero: Schema.Attribute.Component<'sections.hero', false>;
+    howWeWork: Schema.Attribute.Component<'sections.how-we-work', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::homepage.homepage'
+    > &
+      Schema.Attribute.Private;
+    OurClient: Schema.Attribute.Component<'sections.our-client', false>;
+    pillars: Schema.Attribute.Component<'sections.pillars', false>;
+    poweredBy: Schema.Attribute.Component<'sections.powered-by', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    testimonials: Schema.Attribute.Component<'sections.testimonials', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -975,6 +1014,7 @@ declare module '@strapi/strapi' {
       'api::about.about': ApiAboutAbout;
       'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::global.global': ApiGlobalGlobal;
+      'api::homepage.homepage': ApiHomepageHomepage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_sections_contact_forms",
+  "info": {
+    "displayName": "Contact Form",
+    "description": "Contact form section component"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "interestOptions": {
+      "type": "json",
+      "required": true
+    },
+    "fields": {
+      "type": "json",
+      "required": true
+    },
+    "submitText": {
+      "type": "string",
+      "required": true
+    },
+    "cta": {
+      "type": "string",
+      "required": true
+    },
+    "ctaButton": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

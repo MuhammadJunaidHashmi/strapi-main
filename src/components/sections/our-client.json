@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_our_clients",
+  "info": {
+    "displayName": "Our client"
+  },
+  "options": {},
+  "attributes": {
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_pillars",
+  "info": {
+    "displayName": "Pillars",
+    "description": "Pillars section component"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "sections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.pillar-section",
+      "required": true,
+      "min": 1
+    }
+  }
+}

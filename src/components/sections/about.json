@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_abouts",
+  "info": {
+    "displayName": "About",
+    "description": "About section component"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.stat",
+      "required": true,
+      "min": 1
+    }
+  }
+}

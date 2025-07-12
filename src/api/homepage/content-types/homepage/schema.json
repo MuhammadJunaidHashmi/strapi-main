@@ -1,0 +1,71 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage",
+    "description": "Homepage content and settings"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.hero",
+      "repeatable": false
+    },
+    "about": {
+      "type": "component",
+      "component": "sections.about",
+      "repeatable": false
+    },
+    "howWeWork": {
+      "type": "component",
+      "component": "sections.how-we-work",
+      "repeatable": false
+    },
+    "pillars": {
+      "type": "component",
+      "component": "sections.pillars",
+      "repeatable": false
+    },
+    "augmentation": {
+      "type": "component",
+      "component": "sections.augmentation",
+      "repeatable": false
+    },
+    "poweredBy": {
+      "type": "component",
+      "component": "sections.powered-by",
+      "repeatable": false
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "sections.testimonials",
+      "repeatable": false
+    },
+    "blogSection": {
+      "type": "component",
+      "component": "sections.blog-section",
+      "repeatable": false
+    },
+    "cta": {
+      "type": "component",
+      "component": "sections.cta",
+      "repeatable": false
+    },
+    "contactForm": {
+      "type": "component",
+      "component": "sections.contact-form",
+      "repeatable": false
+    },
+    "OurClient": {
+      "type": "component",
+      "component": "sections.our-client",
+      "repeatable": false
+    }
+  }
+}

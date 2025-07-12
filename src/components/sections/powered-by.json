@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_sections_powered_bies",
+  "info": {
+    "displayName": "Powered By",
+    "description": "Powered By section component"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "features": {
+      "type": "json",
+      "required": true
+    },
+    "logos": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": ["images"]
+    }
+  }
+}

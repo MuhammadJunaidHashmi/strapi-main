@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_how_we_works",
+  "info": {
+    "displayName": "How We Work",
+    "description": "How We Work section component"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.stat",
+      "required": true,
+      "min": 1
+    }
+  }
+}

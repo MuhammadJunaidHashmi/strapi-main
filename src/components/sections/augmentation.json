@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_augmentations",
+  "info": {
+    "displayName": "Augmentation",
+    "description": "Augmentation section component"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_authors",
+  "info": {
+    "displayName": "Author",
+    "description": "Author information with name and role"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
