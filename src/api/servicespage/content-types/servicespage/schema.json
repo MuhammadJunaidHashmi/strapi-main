@@ -25,6 +25,11 @@
       "type": "component",
       "component": "sections.industries",
       "repeatable": false
+    },
+    "services": {
+      "type": "component",
+      "component": "sections.services",
+      "repeatable": true
     }
   }
 }

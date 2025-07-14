@@ -13,11 +13,6 @@
     },
     "items": {
       "type": "json"
-    },
-    "services": {
-      "type": "component",
-      "component": "sections.services",
-      "repeatable": true
     }
   },
   "config": {}

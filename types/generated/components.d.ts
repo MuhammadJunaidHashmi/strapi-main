@@ -151,7 +151,6 @@ export interface SectionsIndustries extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.String;
     items: Schema.Attribute.JSON;
-    services: Schema.Attribute.Component<'sections.services', true>;
     title: Schema.Attribute.String;
   };
 }
