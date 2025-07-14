@@ -177,6 +177,17 @@ export interface SectionsItems extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsOfferList extends Struct.ComponentSchema {
+  collectionName: 'components_sections_offer_lists';
+  info: {
+    displayName: 'OfferList';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsOfferings extends Struct.ComponentSchema {
   collectionName: 'components_sections_offerings';
   info: {
@@ -235,6 +246,19 @@ export interface SectionsPoweredBy extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsServiceOffer extends Struct.ComponentSchema {
+  collectionName: 'components_sections_service_offers';
+  info: {
+    displayName: 'ServiceOffer';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    offerList: Schema.Attribute.Component<'sections.offer-list', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsServices extends Struct.ComponentSchema {
   collectionName: 'components_sections_services';
   info: {
@@ -242,6 +266,7 @@ export interface SectionsServices extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.String;
+    offers: Schema.Attribute.Component<'sections.service-offer', false>;
     serviceId: Schema.Attribute.Integer;
     subServices: Schema.Attribute.Component<'sections.sub-services', true>;
     title: Schema.Attribute.String;
@@ -401,10 +426,12 @@ declare module '@strapi/strapi' {
       'sections.industries': SectionsIndustries;
       'sections.introduction': SectionsIntroduction;
       'sections.items': SectionsItems;
+      'sections.offer-list': SectionsOfferList;
       'sections.offerings': SectionsOfferings;
       'sections.our-client': SectionsOurClient;
       'sections.pillars': SectionsPillars;
       'sections.powered-by': SectionsPoweredBy;
+      'sections.service-offer': SectionsServiceOffer;
       'sections.services': SectionsServices;
       'sections.sub-services': SectionsSubServices;
       'sections.testimonials': SectionsTestimonials;

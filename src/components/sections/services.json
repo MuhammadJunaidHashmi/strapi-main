@@ -18,6 +18,11 @@
       "type": "component",
       "component": "sections.sub-services",
       "repeatable": true
+    },
+    "offers": {
+      "type": "component",
+      "component": "sections.service-offer",
+      "repeatable": false
     }
   },
   "config": {}

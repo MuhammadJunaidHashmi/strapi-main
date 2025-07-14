@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_sections_service_offers",
+  "info": {
+    "displayName": "ServiceOffer"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "offerList": {
+      "type": "component",
+      "component": "sections.offer-list",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
