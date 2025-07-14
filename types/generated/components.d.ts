@@ -143,6 +143,53 @@ export interface SectionsHowWeWork extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsIndustries extends Struct.ComponentSchema {
+  collectionName: 'components_sections_industries';
+  info: {
+    displayName: 'industries';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    items: Schema.Attribute.JSON;
+    services: Schema.Attribute.Component<'sections.services', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsIntroduction extends Struct.ComponentSchema {
+  collectionName: 'components_sections_introductions';
+  info: {
+    displayName: 'introduction';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsItems extends Struct.ComponentSchema {
+  collectionName: 'components_sections_items';
+  info: {
+    displayName: 'items';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsOfferings extends Struct.ComponentSchema {
+  collectionName: 'components_sections_offerings';
+  info: {
+    displayName: 'offerings';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    items: Schema.Attribute.Component<'sections.items', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsOurClient extends Struct.ComponentSchema {
   collectionName: 'components_sections_our_clients';
   info: {
@@ -186,6 +233,30 @@ export interface SectionsPoweredBy extends Struct.ComponentSchema {
     features: Schema.Attribute.JSON & Schema.Attribute.Required;
     logos: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SectionsServices extends Struct.ComponentSchema {
+  collectionName: 'components_sections_services';
+  info: {
+    displayName: 'services';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    serviceId: Schema.Attribute.Integer;
+    subServices: Schema.Attribute.Component<'sections.sub-services', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsSubServices extends Struct.ComponentSchema {
+  collectionName: 'components_sections_sub_services';
+  info: {
+    displayName: 'subServices';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -328,9 +399,15 @@ declare module '@strapi/strapi' {
       'sections.get-started': SectionsGetStarted;
       'sections.hero': SectionsHero;
       'sections.how-we-work': SectionsHowWeWork;
+      'sections.industries': SectionsIndustries;
+      'sections.introduction': SectionsIntroduction;
+      'sections.items': SectionsItems;
+      'sections.offerings': SectionsOfferings;
       'sections.our-client': SectionsOurClient;
       'sections.pillars': SectionsPillars;
       'sections.powered-by': SectionsPoweredBy;
+      'sections.services': SectionsServices;
+      'sections.sub-services': SectionsSubServices;
       'sections.testimonials': SectionsTestimonials;
       'shared.author': SharedAuthor;
       'shared.blog-post': SharedBlogPost;

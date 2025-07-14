@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_sub_services",
+  "info": {
+    "displayName": "subServices"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

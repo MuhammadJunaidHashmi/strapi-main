@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "servicespages",
+  "info": {
+    "singularName": "servicespage",
+    "pluralName": "servicespages",
+    "displayName": "Servicespage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.hero",
+      "repeatable": false
+    },
+    "introduction": {
+      "type": "component",
+      "component": "sections.introduction",
+      "repeatable": false
+    },
+    "industries": {
+      "type": "component",
+      "component": "sections.industries",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_offerings",
+  "info": {
+    "displayName": "offerings"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "component": "sections.items",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

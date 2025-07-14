@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "blogpages",
+  "info": {
+    "singularName": "blogpage",
+    "pluralName": "blogpages",
+    "displayName": "Blogpage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.hero",
+      "repeatable": false
+    },
+    "introduction": {
+      "type": "component",
+      "component": "sections.introduction",
+      "repeatable": false
+    },
+    "blogs": {
+      "type": "component",
+      "component": "shared.blog-post",
+      "repeatable": true
+    }
+  }
+}

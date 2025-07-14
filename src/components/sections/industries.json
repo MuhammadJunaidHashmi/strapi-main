@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_sections_industries",
+  "info": {
+    "displayName": "industries"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "items": {
+      "type": "json"
+    },
+    "services": {
+      "type": "component",
+      "component": "sections.services",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
