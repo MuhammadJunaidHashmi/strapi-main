@@ -15,7 +15,7 @@ module.exports = createCoreService('api::aboutpage.aboutpage', ({ strapi }) => (
           populate: ['logos']
         },
         offerings: {
-          populate: ['subOfferings'] // Adjust if there are nested fields
+          populate: ['items'] // Adjust if there are nested fields
         }
       }
     });

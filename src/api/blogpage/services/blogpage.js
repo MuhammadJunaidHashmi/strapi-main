@@ -15,9 +15,7 @@ module.exports = createCoreService('api::blogpage.blogpage', ({ strapi }) => ({
           populate: ['logos']
         },
         introduction: {},
-        blogs: {
-          populate: ['author', 'coverImage'] // Add nested fields if blog-post has them
-        }
+        blogs: {}
       }
     });
   },
